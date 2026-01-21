@@ -1,23 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-    <div class="header">
-        <div class="right">
-            <a href="#" class="link">Home</a>
-            <a href="#" class="link">Contact</a>
-            <a href="#" class="link">About</a>
-            <a href="#" class="link">Projects</a>
-        </div>
-        <div class="boxes">
-          <div class="box">box1</div>
-          <div class="box">box2</div>
-            <div class="childbox">a</div>
-          <div class="box">box3</div>
-          <div class="box">box4</div>
-        </div>
-    </div>
+  <button type="button" id="strt">start</button>
+
+  <script>
+
+    let strt = document.getElementById('strt');
+    strt.addEventListener('click', function() {
+      count = 0;
+      let intervalId = setInterval(function() {
+        count++;
+        btn.textContent = 'Count: ' + count;
+        if (count >= 10) {
+          clearInterval(intervalId);
+          btn.textContent = 'Click me';
+        }
+      }, 1000);
+    });
+
+    
+  </script>
 </body>
 </html>

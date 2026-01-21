@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // JavaScript Object 
+        const person = {
+            name: "Rishav",
+            age: 18,
+            DOB: 2006
+        };
+        // Accessing values from Object 
+        let getPerson = person.name;
+        console.log(getPerson);
+        // OR 
+        let gP = person['name'];
+        console.log(gP);
+        //  General Syntax of accessing values from Object 
+        // objectName.propertyName
+        // OR 
+        // objectName["propertyName"]
+
+        // We use for ... in loop to iterate Object Keys.
+        // Iterating only Keys 
+        for (let key in person) {
+            console.log(key);
+
+        }
+        // Iterating only Values
+        for (let key in person) {
+            console.log(person[key]);
+
+        }
+        // Iterating both keys and Values
+        for (let key in person) {
+            console.log(key + " : " + person[key]);
+        }
+        // What is array?
+        // Array is group of similar types of object. 
+        // Example
+        let cars = ["Lambo", "BMW", "Marcedes"];
+        // We use for ... of loop to iterate arrays.
+        for (let car of cars) {
+            console.log(car);
+        }
+        // Group of objects
+
+        const college1 = {
+            name: "Texas",
+            DOE: 2000,
+            address: "Siphal",
+        };
+        const college2 = {
+            name: "St. Lawrence",
+            DOE: 1998,
+            address: "Chabahil",
+        };
+        const college3 = {
+            name: "Orchid",
+            DOE: 1995,
+            addres: "Gaushala",
+        };
+
+        let colleges = [college1, college2, college3];
+        console.log("=================");
+
+        for (let college of colleges) {
+            for (let key in college) {
+                console.log(key + " : " + college[key]);
+            }
+            console.log("=================");
+        }
+    </script>
+</body>
+
+</html>
