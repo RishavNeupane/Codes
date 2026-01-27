@@ -109,7 +109,7 @@ class SquaresXD(Scene):
         self.play(DrawBorderThenFill(s1))
         self.play(DrawBorderThenFill(s2))
         self.wait(0.5)
-        self.play(s2.animate.next_to(s1,RIGHT))
+        self.play(s2.animate.next_to(s1,LEFT))
 
         G1 = VGroup(s1,s2)
 
